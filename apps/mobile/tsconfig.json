@@ -1,0 +1,11 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": { "outDir": "dist", "types": ["react", "react-native"] },
+    "include": ["**/*.ts", "**/*.tsx"],
+    "exclude": ["node_modules"],
+    "references": [
+      { "path": "../../packages/shared" },
+      { "path": "../../packages/api-clients" }
+    ]
+  }
+  

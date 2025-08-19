@@ -1,0 +1,46 @@
+{
+    "extends": "../../tsconfig.base.json",
+    "compilerOptions": {
+      "outDir": "dist",
+      "lib": [
+        "dom",
+        "dom.iterable",
+        "esnext"
+      ],
+      "allowJs": true,
+      "noEmit": true,
+      "incremental": true,
+      "esModuleInterop": true,
+      "isolatedModules": true,
+      "jsx": "preserve",
+      "plugins": [
+        {
+          "name": "next"
+        }
+      ]
+    },
+    "include": [
+      "next-env.d.ts",
+      "**/*.ts",
+      "**/*.tsx",
+      ".next/types/**/*.ts"
+    ],
+    "exclude": [
+      "node_modules"
+    ],
+    "references": [
+      {
+        "path": "../../packages/shared"
+      },
+      {
+        "path": "../../packages/game-engines"
+      },
+      {
+        "path": "../../packages/ui"
+      },
+      {
+        "path": "../../packages/api-clients"
+      }
+    ]
+  }
+  
