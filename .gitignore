@@ -3,7 +3,6 @@
 ```gitignore
 # Node / pnpm
 node_modules/
-pnpm-lock.yaml
 *.log
 npm-debug.log*
 pnpm-debug.log*
