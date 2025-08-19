@@ -1,0 +1,31 @@
+{
+  "name": "@thepregames/mobile",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "expo start",
+    "build": "tsc -p tsconfig.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "@thepregames/api-clients": "workspace:*",
+    "@thepregames/shared": "workspace:*",
+    "expo": "^53.0.20",
+    "react": "19.0.0",
+    "react-native": "0.79.5"
+  },
+  "devDependencies": {
+    "@types/react": "^19.0.14",
+    "eslint": "^9.7.0",
+    "typescript": "^5.8.3"
+  },
+  "expo": {
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "listUnknownPackages": false
+      }
+    }
+  }
+}

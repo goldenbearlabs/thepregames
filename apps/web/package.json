@@ -1,0 +1,28 @@
+{
+    "name": "@thepregames/web",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+      "dev": "next dev",
+      "build": "next build",
+      "start": "next start",
+      "typecheck": "tsc -p tsconfig.json",
+      "lint": "eslint ."
+    },
+    "dependencies": {
+      "next": "14.2.7",
+      "react": "18.3.1",
+      "react-dom": "18.3.1",
+      "@thepregames/shared": "workspace:*",
+      "@thepregames/game-engines": "workspace:*",
+      "@thepregames/ui": "workspace:*",
+      "@thepregames/api-clients": "workspace:*"
+    },
+    "devDependencies": {
+      "typescript": "^5.5.4",
+      "eslint": "^9.7.0",
+      "@types/react": "^18.3.3",
+      "@types/node": "^20.14.11"
+    }
+  }
+  
