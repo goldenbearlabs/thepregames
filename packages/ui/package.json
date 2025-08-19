@@ -5,6 +5,7 @@
     "type": "module",
     "main": "src/index.tsx",
     "types": "src/index.tsx",
+    "sideEffects": false,
     "scripts": {
       "build": "echo skip",
       "dev": "echo skip",
