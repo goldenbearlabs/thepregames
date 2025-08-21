@@ -16,7 +16,8 @@
       "@thepregames/shared": "workspace:*",
       "@thepregames/game-engines": "workspace:*",
       "@thepregames/ui": "workspace:*",
-      "@thepregames/api-clients": "workspace:*"
+      "@thepregames/api-clients": "workspace:*",
+      "zod": "^3.23.8"
     },
     "devDependencies": {
       "typescript": "^5.5.4",

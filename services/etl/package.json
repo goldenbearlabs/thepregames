@@ -1,13 +1,19 @@
 {
-    "name": "@thepregames/etl",
-    "version": "0.1.0",
-    "private": true,
-    "type": "module",
-    "scripts": {
-      "dev": "echo skip",
-      "build": "echo skip",
-      "typecheck": "tsc -p tsconfig.json",
-      "lint": "eslint ."
-    }
+  "name": "@thepregames/etl",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx --env-file=.env.local src/index.ts",
+    "build": "tsc -p tsconfig.json && node dist/index.js",
+    "typecheck": "tsc -p tsconfig.json",
+    "lint": "eslint ."
+  },
+  "dependencies": {
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5",
+    "tsx": "^4.20.4"
   }
-  
+}
