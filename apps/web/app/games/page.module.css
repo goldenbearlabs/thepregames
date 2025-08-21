@@ -1,0 +1,271 @@
+/* apps/web/app/games/page.module.css */
+.container {
+    min-height: 100vh;
+    padding-top: 60px; /* Account for fixed navbar */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 20% 30%, rgba(229, 57, 53, 0.1) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(255, 214, 0, 0.05) 0%, transparent 40%);
+    z-index: -1;
+  }
+  
+  .hero {
+    background: linear-gradient(to right, var(--secondary), var(--dark));
+    padding: var(--spacing-xxl) 0;
+    margin-bottom: var(--spacing-xl);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(circle at 20% 30%, rgba(229, 57, 53, 0.15) 0%, transparent 40%),
+      radial-gradient(circle at 80% 70%, rgba(255, 214, 0, 0.1) 0%, transparent 40%);
+    z-index: 0;
+  }
+  
+  .title {
+    color: var(--primary);
+    margin-bottom: var(--spacing-md);
+    position: relative;
+    z-index: 1;
+  }
+  
+  .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    max-width: 600px;
+    position: relative;
+    z-index: 1;
+  }
+  
+  .filters {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .searchBox {
+    position: relative;
+    max-width: 400px;
+  }
+  
+  .searchInput {
+    width: 100%;
+    padding: var(--spacing-md) var(--spacing-xl) var(--spacing-md) var(--spacing-md);
+    background-color: var(--gray);
+    border: 1px solid var(--gray-light);
+    border-radius: var(--border-radius);
+    color: var(--light);
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  .searchInput:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(229, 57, 53, 0.2);
+  }
+  
+  .searchIcon {
+    position: absolute;
+    right: var(--spacing-md);
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    opacity: 0.7;
+  }
+  
+  .categoryFilters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-sm);
+  }
+  
+  .categoryFilter {
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--gray);
+    border: none;
+    border-radius: var(--border-radius);
+    color: var(--light);
+    cursor: pointer;
+    transition: var(--transition);
+    font-weight: 500;
+  }
+  
+  .categoryFilter:hover {
+    background-color: var(--gray-light);
+    transform: translateY(-2px);
+  }
+  
+  .categoryFilter.active {
+    background-color: var(--primary);
+    color: var(--dark);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .gameGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: var(--spacing-xl);
+    margin-bottom: var(--spacing-xxl);
+  }
+  
+  .gameCard {
+    background-color: var(--gray);
+    border-radius: var(--border-radius-lg);
+    overflow: hidden;
+    transition: var(--transition);
+    box-shadow: var(--shadow-md);
+  }
+  
+  .gameCard:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .gameImageContainer {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center; /* horizontal */
+    align-items: center;     /* vertical */
+  }
+  
+  .gameImage {
+    height: 95%;
+    object-fit: cover;
+    transition: var(--transition);
+  }
+  
+  .gameCard:hover .gameImage {
+    transform: scale(1.05);
+  }
+  
+  .gameOverlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.7) 100%);
+    opacity: 0.7;
+    transition: var(--transition);
+  }
+  
+  .gameCard:hover .gameOverlay {
+    opacity: 0.5;
+  }
+  
+  .gameCategory {
+    position: absolute;
+    bottom: var(--spacing-md);
+    left: var(--spacing-md);
+    background-color: var(--primary);
+    color: var(--dark);
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--border-radius);
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  .gameContent {
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .gameName {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--light);
+    margin: 0;
+  }
+  
+  .gameDescription {
+    opacity: 0.8;
+    line-height: 1.5;
+    margin: 0;
+    flex: 1;
+  }
+  
+  .gameMeta {
+    display: flex;
+    gap: var(--spacing-lg);
+    margin: var(--spacing-sm) 0;
+  }
+  
+  .metaItem {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: 0.875rem;
+    opacity: 0.7;
+  }
+  
+  .metaItem svg {
+    width: 16px;
+    height: 16px;
+    color: var(--primary);
+  }
+  
+  .playButton {
+    display: block;
+    text-align: center;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--primary);
+    color: var(--dark);
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    transition: var(--transition);
+    margin-top: var(--spacing-sm);
+  }
+  
+  .playButton:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(229, 57, 53, 0.3);
+  }
+  
+  .noResults {
+    text-align: center;
+    padding: var(--spacing-xxl) 0;
+    opacity: 0.7;
+  }
+  
+  @media (max-width: 768px) {
+    .gameGrid {
+      grid-template-columns: 1fr;
+    }
+    
+    .gameMeta {
+      flex-direction: column;
+      gap: var(--spacing-sm);
+    }
+    
+    .categoryFilters {
+      justify-content: center;
+    }
+  }

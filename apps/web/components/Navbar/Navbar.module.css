@@ -1,0 +1,237 @@
+/* apps/web/components/Navbar/Navbar.module.css */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(26, 26, 26, 0.95);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--gray);
+  z-index: 1000;
+  padding: var(--spacing-sm) 0;
+}
+
+.navContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-lg);
+}
+
+.navLink {
+  color: var(--light);
+  font-weight: 500;
+  transition: var(--transition);
+  padding: var(--spacing-sm) 0;
+  position: relative;
+}
+
+.navLink:hover {
+  color: var(--primary);
+}
+
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--primary);
+  transition: var(--transition);
+}
+
+.navLink:hover::after {
+  width: 100%;
+}
+
+.authButtons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-left: var(--spacing-lg);
+}
+
+.signUpBtn {
+  padding: var(--spacing-sm) var(--spacing-md);
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: var(--spacing-xs);
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: var(--light);
+  margin: 2px 0;
+  transition: var(--transition);
+  border-radius: 2px;
+}
+
+@media (max-width: 968px) {
+  .hamburger {
+    display: flex;
+  }
+  
+  .navMenu {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    flex-direction: column;
+    background-color: var(--secondary);
+    padding: var(--spacing-lg);
+    gap: var(--spacing-md);
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    border-top: 1px solid var(--gray);
+  }
+  
+  .navMenuOpen {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .authButtons {
+    margin-left: 0;
+    flex-direction: column;
+    width: 100%;
+    gap: var(--spacing-md);
+  }
+  
+  .signUpBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.navItemWithDropdown {
+  position: relative;
+}
+
+.navLink {
+  color: var(--light);
+  font-weight: 500;
+  transition: var(--transition);
+  padding: var(--spacing-sm) 0;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+.dropdownIcon {
+  width: 16px;
+  height: 16px;
+  transition: var(--transition);
+}
+
+.navItemWithDropdown:hover .dropdownIcon {
+  transform: rotate(180deg);
+}
+
+.dropdownMenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 240px;
+  background-color: var(--gray);
+  border-radius: var(--border-radius);
+  padding: var(--spacing-sm) 0;
+  box-shadow: var(--shadow-lg);
+  z-index: 1000;
+  margin-top: var(--spacing-xs);
+}
+
+.dropdownHeader {
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--light);
+  opacity: 0.7;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.dropdownItem {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-sm) var(--spacing-md);
+  color: var(--light);
+  transition: var(--transition);
+}
+
+.dropdownItem:hover {
+  background-color: var(--gray-light);
+  color: var(--primary);
+}
+
+.gameIcon {
+  font-size: 1.2rem;
+  width: 24px;
+  text-align: center;
+}
+
+.gameName {
+  flex: 1;
+}
+
+.dropdownDivider {
+  height: 1px;
+  background-color: var(--gray-light);
+  margin: var(--spacing-sm) 0;
+}
+
+/* Mobile styles */
+@media (max-width: 968px) {
+  .navItemWithDropdown {
+    width: 100%;
+  }
+  
+  .dropdownMenu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    margin-top: 0;
+    background-color: transparent;
+    padding-left: var(--spacing-lg);
+  }
+  
+  .dropdownHeader {
+    padding-left: var(--spacing-lg);
+  }
+  
+  .dropdownItem {
+    padding-left: var(--spacing-xxl);
+  }
+}

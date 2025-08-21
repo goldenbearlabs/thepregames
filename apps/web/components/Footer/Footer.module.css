@@ -1,0 +1,124 @@
+/* apps/web/components/Footer/Footer.module.css */
+.footer {
+  background-color: var(--dark);
+  padding: var(--spacing-xxl) 0 var(--spacing-lg);
+  margin-top: auto;
+}
+
+.footerContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.footerContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-xl);
+}
+
+.footerSection {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.footerHeading {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  color: var(--primary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.footerSubheading {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: var(--spacing-sm);
+  color: var(--light);
+}
+
+.footerLinks {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.footerLinks a {
+  color: var(--light);
+  opacity: 0.8;
+  transition: var(--transition);
+}
+
+.footerLinks a:hover {
+  opacity: 1;
+  color: var(--primary);
+}
+
+.socialLinks {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: var(--spacing-sm);
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: var(--gray);
+  border-radius: 50%;
+  transition: var(--transition);
+}
+
+.socialLinks a:hover {
+  background-color: var(--primary);
+  color: var(--dark);
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--gray);
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.copyright {
+  color: var(--light);
+  opacity: 0.7;
+}
+
+.attribution {
+  font-size: 0.8rem;
+  opacity: 0.6;
+}
+
+.attribution a {
+  color: var(--light);
+}
+
+.attribution a:hover {
+  color: var(--primary);
+}
+
+.footerLogo {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-md);
+}
+
+.footerLogo img {
+  filter: brightness(0) invert(1); /* Makes the logo white */
+}
+
+@media (max-width: 768px) {
+  .footerBottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}

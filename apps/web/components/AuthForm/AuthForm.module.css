@@ -1,0 +1,299 @@
+/* apps/web/components/AuthForm/AuthForm.module.css */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--spacing-xl);
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: var(--spacing-xl) var(--spacing-md);
+  }
+  
+  .card {
+    background-color: var(--gray);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-lg);
+  }
+  
+  .logo {
+    text-align: center;
+    margin-bottom: var(--spacing-xl);
+  }
+  
+  .logo h2 {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    color: var(--primary);
+    margin-top: var(--spacing-md);
+  }
+  
+  .form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+  }
+  
+  .profileSection {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--spacing-md);
+  }
+  
+  .avatarUpload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+  }
+  
+  .avatarPreview {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: var(--gray-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--primary);
+  }
+  
+  .avatarPlaceholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--gray-light);
+    color: var(--light);
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+  
+  .uploadLabel {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background-color: var(--gray-light);
+    border-radius: var(--border-radius);
+    color: var(--light);
+    cursor: pointer;
+    transition: var(--transition);
+    font-size: 0.9rem;
+  }
+  
+  .uploadLabel:hover {
+    background-color: var(--primary);
+    color: var(--dark);
+  }
+  
+  .fileInput {
+    display: none;
+  }
+  
+  .formGroup {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xs);
+  }
+  
+  .formGroup label {
+    font-weight: 500;
+    color: var(--light);
+  }
+  
+  .formGroup input {
+    padding: var(--spacing-md);
+    background-color: var(--gray-light);
+    border: 1px solid var(--gray-light);
+    border-radius: var(--border-radius);
+    color: var(--light);
+    font-size: 1rem;
+    transition: var(--transition);
+  }
+  
+  .formGroup input:focus {
+    outline: none;
+    border-color: var(--primary);
+    box-shadow: 0 0 0 2px rgba(229, 57, 53, 0.2);
+  }
+  
+  .checkboxGroup {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin: var(--spacing-sm) 0;
+  }
+  
+  .checkboxGroup input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--primary);
+  }
+  
+  .checkboxGroup label {
+    font-size: 0.9rem;
+    color: var(--light);
+  }
+  
+  .submitButton {
+    padding: var(--spacing-md);
+    background-color: var(--primary);
+    color: var(--dark);
+    border: none;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    margin-top: var(--spacing-sm);
+  }
+  
+  .submitButton:hover {
+    background-color: var(--primary-light);
+    transform: translateY(-2px);
+  }
+  
+  .divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: var(--spacing-lg) 0;
+    color: var(--light);
+    opacity: 0.7;
+  }
+  
+  .divider::before,
+  .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid var(--gray-light);
+  }
+  
+  .divider span {
+    padding: 0 var(--spacing-md);
+  }
+  
+  .googleButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    padding: var(--spacing-md);
+    background-color: var(--gray-light);
+    color: var(--light);
+    border: 1px solid var(--gray-light);
+    border-radius: var(--border-radius);
+    font-weight: 500;
+    cursor: pointer;
+    transition: var(--transition);
+  }
+  
+  .googleButton:hover {
+    background-color: var(--gray);
+    border-color: var(--primary);
+  }
+  
+  .googleIcon {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .switchMode {
+    text-align: center;
+    margin-top: var(--spacing-lg);
+    color: var(--light);
+  }
+  
+  .switchMode a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  
+  .switchMode a:hover {
+    text-decoration: underline;
+  }
+  
+  .proSection {
+    background: linear-gradient(135deg, var(--dark) 0%, var(--secondary) 100%);
+    border-radius: var(--border-radius-lg);
+    padding: var(--spacing-xl);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid var(--primary);
+  }
+  
+  .proSection h3 {
+    color: var(--primary);
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: var(--spacing-lg);
+    font-family: var(--font-heading);
+  }
+  
+  .proBenefits {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .benefit {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-md);
+  }
+  
+  .benefitIcon {
+    font-size: 1.5rem;
+    background-color: rgba(229, 57, 53, 0.2);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  
+  .benefitText h4 {
+    color: var(--light);
+    margin-bottom: var(--spacing-xs);
+    font-size: 1.1rem;
+  }
+  
+  .benefitText p {
+    color: var(--light);
+    opacity: 0.8;
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .pricing {
+    text-align: center;
+    padding: var(--spacing-md);
+    background-color: rgba(229, 57, 53, 0.1);
+    border-radius: var(--border-radius);
+  }
+  
+  .pricing p {
+    color: var(--light);
+    margin: 0;
+  }
+  
+  .pricing span {
+    color: var(--primary);
+    font-weight: 600;
+  }
+  
+  @media (min-width: 968px) {
+    
+    .proSection {
+      position: sticky;
+      top: 100px;
+    }
+  }
+  
+  @media (max-width: 967px) {
+    .proSection {
+      order: -1;
+    }
+  }
