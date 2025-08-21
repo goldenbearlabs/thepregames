@@ -56,9 +56,8 @@ export default function Navbar() {
                     key={game.id}
                     href={game.route}
                     className={styles.dropdownItem}
-                    style={{ '--game-color': game.color } as React.CSSProperties}
                   >
-                    <span className={styles.gameIcon}>{game.icon}</span>
+                    <span className={styles.gameIcon}></span>
                     <span className={styles.gameName}>{game.name}</span>
                   </Link>
                 ))}
