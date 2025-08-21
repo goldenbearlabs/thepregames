@@ -188,7 +188,7 @@ export default function AuthForm({ mode }: AuthFormProps) {
 
           {mode === 'login' ? (
             <p className={styles.switchMode}>
-              Don't have an account? <a href="/signup">Sign up</a>
+              Dont have an account? <a href="/signup">Sign up</a>
             </p>
           ) : (
             <p className={styles.switchMode}>

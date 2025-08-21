@@ -83,8 +83,8 @@ export default function Home() {
                 Games for Every Occasion
               </h2>
               <p>
-                Whether you're hosting a small gathering or a massive party, 
-                we've got games that fit the vibe. Filter by group size, 
+                Whether youre hosting a small gathering or a massive party, 
+                weve got games that fit the vibe. Filter by group size, 
                 difficulty, and equipment needed.
               </p>
               <ul className={styles.gameList}>
